@@ -14,7 +14,7 @@ deploy:
   - provider: releases
     api_key:
       secure: bZmVVPSf2hAJO5ooFnSyB6af6+rELTdUDuD3I1FBkaRuxC4x484jcdZjZQunm+C5rmYRpdeNyJdD3BglBQnYRpvywzSf2n4gCzVYYa0BB6g/6R3YUbqbsr39SEcdFftlNLYGNwESL6wnx5U3L+i0viz3VrRjHdSB6BiWi04lkHtzrq+5loDLNbkqb8mvGO1KD9WHY69oi2PzV0Xk/sFGbVpEuUTLk/Xd3sdtktnHYui98seLK+6tMZycZXJw34zgg3NC7lkiellaHlmCX76G6g21IrhV1fy0pu9W0oSlgxnbt+lDliq90UpYaTtBW6Qk98PJguy5oBjLZr5vfU+oBEsWdrzSidEM7JIpb0gzlLdpQUfBayKkyQG5vmGA242yw1gzZVsJ1LFCqpUmNHXQLusQfLW4vvXxZ7j0Hh0Mtyy71NFSFi/vjpOL281jK6xtmnSlENSW+SjI2gAOCS6CzGxn/ArhT/30iIJA2kgcR9OjJc2GMTBDWRvEFeU2BVCOYvDIR2CW/yBVkBiCoYs+DerTmvuDRCqAVooaTFlKJXQqAn7tNMKM8mwXOAtAFjSS778I4b6Yd9QBrYp8hQJXHAMJpawuPuLaPGaYyS0V4ShaXXufE1MCUCFB9q0MAEcJv2cA3uH9WvahJ+UKAK1WHvcDTIqlyyS6pJcxp0O5b8g=
-    file: ''
+    file: changelog.txt
     on:
       repo: bijujoseph/myrepotest
       branch: master
