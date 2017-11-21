@@ -17,4 +17,5 @@ deploy:
     file: "changelog.txt"
     on:
       repo: bijujoseph/myrepotest
+      tags: true
       branch: master
