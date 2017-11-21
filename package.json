@@ -1,0 +1,25 @@
+{
+  "name": "@bijujoseph/mytestrepo",
+  "version": "1.0.0",
+  "description": "testing few things",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bijujoseph/myrepotest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bijujoseph/myrepotest/issues"
+  },
+  "homepage": "https://github.com/bijujoseph/myrepotest#readme",
+  "dependencies": {
+    "generate-npm-token": "^0.1.2"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
+}
