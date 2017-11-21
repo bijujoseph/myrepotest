@@ -1,0 +1,2 @@
+## Fixed
+ JIRA-1 - my first functions
