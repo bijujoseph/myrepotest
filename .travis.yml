@@ -4,10 +4,18 @@ cache:
   directories:
   - node_modules
 deploy:
-  provider: releases
-  api_key:
-    secure: bZmVVPSf2hAJO5ooFnSyB6af6+rELTdUDuD3I1FBkaRuxC4x484jcdZjZQunm+C5rmYRpdeNyJdD3BglBQnYRpvywzSf2n4gCzVYYa0BB6g/6R3YUbqbsr39SEcdFftlNLYGNwESL6wnx5U3L+i0viz3VrRjHdSB6BiWi04lkHtzrq+5loDLNbkqb8mvGO1KD9WHY69oi2PzV0Xk/sFGbVpEuUTLk/Xd3sdtktnHYui98seLK+6tMZycZXJw34zgg3NC7lkiellaHlmCX76G6g21IrhV1fy0pu9W0oSlgxnbt+lDliq90UpYaTtBW6Qk98PJguy5oBjLZr5vfU+oBEsWdrzSidEM7JIpb0gzlLdpQUfBayKkyQG5vmGA242yw1gzZVsJ1LFCqpUmNHXQLusQfLW4vvXxZ7j0Hh0Mtyy71NFSFi/vjpOL281jK6xtmnSlENSW+SjI2gAOCS6CzGxn/ArhT/30iIJA2kgcR9OjJc2GMTBDWRvEFeU2BVCOYvDIR2CW/yBVkBiCoYs+DerTmvuDRCqAVooaTFlKJXQqAn7tNMKM8mwXOAtAFjSS778I4b6Yd9QBrYp8hQJXHAMJpawuPuLaPGaYyS0V4ShaXXufE1MCUCFB9q0MAEcJv2cA3uH9WvahJ+UKAK1WHvcDTIqlyyS6pJcxp0O5b8g=
-  file: ''
-  on:
-    repo: bijujoseph/myrepotest
-    branch: master
+  - provider: npm
+    email: biju.joseph@semanticbits.com
+    api_key:
+    secure: UtnRxvfRIcMd/CiOhMebd+JQbjeV3Hk4OZHPp4PVJTD3hscPHDgreKzEsRh0Pf0zHjKeGNetB0nAooNZEZ+JA9Ad60q9yuhLUvnqkDQWNhRF6LO5nvDjKdVyoIc7DlWhqcgbCf81G8PEgCxL52AbQCRhllwiOwhYkLrDrPZ93ou7UCLVx0YdNFs4EQCvr3nYcktmVTzlT6bwoWSQtyzADq68+fsPi/KJJnp91TgGPA0Kb5mEmc0q9oW4oblmJfN5+L1UYkagAII8S6lrcug53DH6BhDEUnUAEpqQSFXv5RFtGxEo0v8STmfQNU28akcHzWeyVWzzdsRn8hZoe25Ayz9tmKZJ05/Gj3lQQjVsmk7zaYS8tX75IlxJUraRMpNcTNAIc8Ab19Kj/QqD4kASngUlC90rso4D08ro3xMKklkx4mh46S9b6V7D4dj8IjOm59YBED9fDPm1Mh+cNlpbDWW8GR5p+JcfJhyaOobO7LsV76GbyB249wE+bXCQIm/FNzo9I3dhvbcUpBiq0aF6XaiGylV/ao5nYyOF5E0aAZaosjCITMtKlqqvanTebCGhfgN23dPDZNXwRXC3fMPTcq3AvkfU1WsHM/ZqqemYL7TEph4h/RUoCcI97bxnL9ZFn6ExcH/mFzQ+v4qz4JMq++O4tt9fAnBSn+55wqv47I0=
+    on:
+      tag: true
+      repo: bijujoseph/myrepotest
+      branch: master
+  - provider: releases
+    api_key:
+      secure: bZmVVPSf2hAJO5ooFnSyB6af6+rELTdUDuD3I1FBkaRuxC4x484jcdZjZQunm+C5rmYRpdeNyJdD3BglBQnYRpvywzSf2n4gCzVYYa0BB6g/6R3YUbqbsr39SEcdFftlNLYGNwESL6wnx5U3L+i0viz3VrRjHdSB6BiWi04lkHtzrq+5loDLNbkqb8mvGO1KD9WHY69oi2PzV0Xk/sFGbVpEuUTLk/Xd3sdtktnHYui98seLK+6tMZycZXJw34zgg3NC7lkiellaHlmCX76G6g21IrhV1fy0pu9W0oSlgxnbt+lDliq90UpYaTtBW6Qk98PJguy5oBjLZr5vfU+oBEsWdrzSidEM7JIpb0gzlLdpQUfBayKkyQG5vmGA242yw1gzZVsJ1LFCqpUmNHXQLusQfLW4vvXxZ7j0Hh0Mtyy71NFSFi/vjpOL281jK6xtmnSlENSW+SjI2gAOCS6CzGxn/ArhT/30iIJA2kgcR9OjJc2GMTBDWRvEFeU2BVCOYvDIR2CW/yBVkBiCoYs+DerTmvuDRCqAVooaTFlKJXQqAn7tNMKM8mwXOAtAFjSS778I4b6Yd9QBrYp8hQJXHAMJpawuPuLaPGaYyS0V4ShaXXufE1MCUCFB9q0MAEcJv2cA3uH9WvahJ+UKAK1WHvcDTIqlyyS6pJcxp0O5b8g=
+    file: ''
+    on:
+      repo: bijujoseph/myrepotest
+      branch: master
