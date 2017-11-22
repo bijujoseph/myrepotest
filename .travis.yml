@@ -5,7 +5,7 @@ cache:
   - node_modules
 before_deploy:
   - npm install jshon
-  - export RELEASE_NOTES=$(npx jshon -s "$(cat RELEASE-NOTES.md)")
+  - export RELEASE_NOTES=$(cat RELEASE-NOTES.md)
 deploy:
   - provider: npm
     email: biju.joseph@semanticbits.com
