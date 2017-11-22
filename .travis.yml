@@ -5,7 +5,7 @@ cache:
   - node_modules
 before_deploy:
   - npm install jshon
-  - export RELEASE_NOTES=$(npx jshon -s "$(cat changelog.txt)")
+  - export RELEASE_NOTES=$(npx jshon -s "$(cat RELEASE-NOTES.md)")
 deploy:
   - provider: npm
     email: biju.joseph@semanticbits.com
@@ -17,7 +17,7 @@ deploy:
   - provider: releases
     api_key:
       secure: lkGeo56RyVU6ecSRxvqYeVV8KEjPSBRn/o1ixiol31Eh3t0c+e8ZM9ophKhSl3QGOJpZ/rK44nGFsncsUc7PMx2k2z+7Xsn6xXwT4kkmte17ThfhXpcuoWDhQgkNO7QCb/lpG17gH3G468Px9DmF4ZWvepgC0OsCK8QAMcMjKTfl1TK3Z/prgx/TgP2H2lDhOCrPbn5ObPSTXH6l4GjWd1eW8KtYJiXenDLeEUcIpKuulm8bZ/zZ2a5lgXaPcIM+ZRx5W4jmoNCN27SwKG7w/urdLf+RmGCer/RnCMcuh5J9PyTPm0u5+iwi6bZr7vSbGjhlR2f6mKuB3+upa3aOMGYw72QRPUQVPJEZGOFER2XVmjG3BochZ8rw1xnQr6kTghiTP8+zdNGXfcsZo0+l+x23BSxUExfWNHFmPrGIKpd3Lcclf1Eo4ua1O+TV7OK5rzbJfIxtBSYp+eSbi/5cou3791oP+hYbDV9qfxYpnS4cnogGVBA7+BDyCV1bDA3wQNLJUEyN98RMOA2LNXNwMsvaYKAiEjgmx/Ao7Z944cD4Vza6CVhxE8ywzoKWl2iSy2N1jmSrJSSC8EfhkciahGR2R2TlXRE8eNB0CZAGl9AuPBWDUMwU0kmAuqFAfrNRz+1Cp9xKD1OaF3CD2Vop4ao5XTP7GcQ2gQLMkfDgw04=
-    file: "changelog.txt"
+    file: "RELEASE-NOTES.md"
     body: ${RELEASE_NOTES}
     on:
       repo: bijujoseph/myrepotest
