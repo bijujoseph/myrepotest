@@ -3,11 +3,14 @@ node_js: '8'
 cache:
   directories:
   - node_modules
+before_deploy:
+  - npm install jshon
+  - export RELEASE_NOTES=$(npx jshon -s "$(cat changelog.txt)")
 deploy:
   - provider: npm
     email: biju.joseph@semanticbits.com
     api_key:
-      secure: UtnRxvfRIcMd/CiOhMebd+JQbjeV3Hk4OZHPp4PVJTD3hscPHDgreKzEsRh0Pf0zHjKeGNetB0nAooNZEZ+JA9Ad60q9yuhLUvnqkDQWNhRF6LO5nvDjKdVyoIc7DlWhqcgbCf81G8PEgCxL52AbQCRhllwiOwhYkLrDrPZ93ou7UCLVx0YdNFs4EQCvr3nYcktmVTzlT6bwoWSQtyzADq68+fsPi/KJJnp91TgGPA0Kb5mEmc0q9oW4oblmJfN5+L1UYkagAII8S6lrcug53DH6BhDEUnUAEpqQSFXv5RFtGxEo0v8STmfQNU28akcHzWeyVWzzdsRn8hZoe25Ayz9tmKZJ05/Gj3lQQjVsmk7zaYS8tX75IlxJUraRMpNcTNAIc8Ab19Kj/QqD4kASngUlC90rso4D08ro3xMKklkx4mh46S9b6V7D4dj8IjOm59YBED9fDPm1Mh+cNlpbDWW8GR5p+JcfJhyaOobO7LsV76GbyB249wE+bXCQIm/FNzo9I3dhvbcUpBiq0aF6XaiGylV/ao5nYyOF5E0aAZaosjCITMtKlqqvanTebCGhfgN23dPDZNXwRXC3fMPTcq3AvkfU1WsHM/ZqqemYL7TEph4h/RUoCcI97bxnL9ZFn6ExcH/mFzQ+v4qz4JMq++O4tt9fAnBSn+55wqv47I0=
+      secure: qusmflD0797SjcsLCIMWeSwOtvkFSpftq1gfuRKIpD2OvL5nbif2lFE6NKVNvqnxRDt74gNXCh2a+uWFPkc2Om587G7Jhoj0qwtcTCmi+ycw8BeP2EJm45ip3TS33tO+JUFeZ2bxO1P/6snrE5H4rv4YbMcvhM7sf/RLEQqvkAyfQ5kFU708xnWSSff7wCQ6fyz+4JkiZB6m7cNwMf1o9dyJVXHOE9k7qFQuhws0aV2E1dZZ2DkUJFMGfXTfbveY+0RmKlfvklFp1MU7A/KDHuzuYqC5oj3TAhHUVKykEYrPWOKUjquBd54HKvh42NysuqWYly+Ipc42PJAGUSgjpgzutupWYvc3UF+qlxRGOGVYlNxG2WyNlwb07zWEyG2FqRTPAQNsL4YJhGyhi9ZfSoBAhcv3RZDNDI3OIFiYPH9LOiwK0bDRGvWdcjD9pXtZZY8LLvPLTu5C8vLreJ2k2CHa5EPmwCRd7oaDra0jkpF/3x8WykdSB6HqwSjUq+j3ZxM77QieMpYhB5yZBLZuB1Qu+8W3mR2am35Oa8WHV1YK8Bu43AILx017gWroS1idN8R4MuUJuSJuaQ96R4gjP5NzZYE3BOU6I764Y4/wueCcQkO7tz1O0WlyKuB+/Ctj7bB2/V+D0IZEbh8FkKjsIIihyzmaDEbVLCqltD5R36o=
     on:
       repo: bijujoseph/myrepotest
       tags: true
@@ -15,6 +18,7 @@ deploy:
     api_key:
       secure: lkGeo56RyVU6ecSRxvqYeVV8KEjPSBRn/o1ixiol31Eh3t0c+e8ZM9ophKhSl3QGOJpZ/rK44nGFsncsUc7PMx2k2z+7Xsn6xXwT4kkmte17ThfhXpcuoWDhQgkNO7QCb/lpG17gH3G468Px9DmF4ZWvepgC0OsCK8QAMcMjKTfl1TK3Z/prgx/TgP2H2lDhOCrPbn5ObPSTXH6l4GjWd1eW8KtYJiXenDLeEUcIpKuulm8bZ/zZ2a5lgXaPcIM+ZRx5W4jmoNCN27SwKG7w/urdLf+RmGCer/RnCMcuh5J9PyTPm0u5+iwi6bZr7vSbGjhlR2f6mKuB3+upa3aOMGYw72QRPUQVPJEZGOFER2XVmjG3BochZ8rw1xnQr6kTghiTP8+zdNGXfcsZo0+l+x23BSxUExfWNHFmPrGIKpd3Lcclf1Eo4ua1O+TV7OK5rzbJfIxtBSYp+eSbi/5cou3791oP+hYbDV9qfxYpnS4cnogGVBA7+BDyCV1bDA3wQNLJUEyN98RMOA2LNXNwMsvaYKAiEjgmx/Ao7Z944cD4Vza6CVhxE8ywzoKWl2iSy2N1jmSrJSSC8EfhkciahGR2R2TlXRE8eNB0CZAGl9AuPBWDUMwU0kmAuqFAfrNRz+1Cp9xKD1OaF3CD2Vop4ao5XTP7GcQ2gQLMkfDgw04=
     file: "changelog.txt"
+    body: ${RELEASE_NOTES}
     on:
       repo: bijujoseph/myrepotest
       tags: true

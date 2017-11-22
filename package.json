@@ -1,6 +1,6 @@
 {
-  "name": "@bijujoseph/mytestrepo",
-  "version": "1.0.5",
+  "name": "bjmytestrepo",
+  "version": "1.0.6",
   "description": "testing few things",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,7 @@
     "generate-npm-token": "^0.1.2"
   },
   "devDependencies": {
-    "mocha": "^4.0.1"
+    "mocha": "^4.0.1",
+    "jshon": "0.0.20121031"
   }
 }
