@@ -1,2 +1,3 @@
 ## Fixed
- 1 - Unable to add negative numbers
+ 2 - body to MD
+ 3 - enter characters
