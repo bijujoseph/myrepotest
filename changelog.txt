@@ -1,3 +1,0 @@
-## Fixed
- JIRA-1 - my first functions
- JIRA-2 - fixed travis
